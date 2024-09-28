@@ -5,6 +5,19 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li a{
+  text-decoration: none;
+  color: grey;
 }
 
 img {
@@ -16,6 +29,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px;
 }
 
 input {
@@ -23,4 +37,35 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+.header {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+}
+
+.left-links, .right-links {
+  display: flex;
+  gap: 8px;
+}
+
+.footer {
+  background-color: #eeeeee;
+  display: flex;
+  margin-top: auto;
+  padding: 8px;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  /* why does layout change a little when flex-direction column is
+  before align items and justify content? */
+  gap: 8px;
 }
